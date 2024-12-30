@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.Domain", "Carpet.Model\Carpet.Domain.csproj", "{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.Application", "Carpet.Application\Carpet.Application.csproj", "{D533E402-E839-4637-BAD5-32852BA4F359}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCF71FEC-D437-499C-8B37-7FF9B53D1D21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.API", "Carpet.API\Carpet.API.csproj", "{435FE384-7A91-4751-BCAE-D7B6FFEAB357}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.DBContext", "Carpet.DBContext\Carpet.DBContext.csproj", "{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpet.Infrastructure", "Carpet.Infrastructure\Carpet.Infrastructure.csproj", "{7A953990-6596-40B8-A426-FA17064C3E62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D533E402-E839-4637-BAD5-32852BA4F359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D533E402-E839-4637-BAD5-32852BA4F359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D533E402-E839-4637-BAD5-32852BA4F359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D533E402-E839-4637-BAD5-32852BA4F359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435FE384-7A91-4751-BCAE-D7B6FFEAB357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435FE384-7A91-4751-BCAE-D7B6FFEAB357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435FE384-7A91-4751-BCAE-D7B6FFEAB357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435FE384-7A91-4751-BCAE-D7B6FFEAB357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A953990-6596-40B8-A426-FA17064C3E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A953990-6596-40B8-A426-FA17064C3E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A953990-6596-40B8-A426-FA17064C3E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A953990-6596-40B8-A426-FA17064C3E62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D10DDDF2-B87D-4DDB-A559-E17F9B314AA3} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
+		{D533E402-E839-4637-BAD5-32852BA4F359} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
+		{435FE384-7A91-4751-BCAE-D7B6FFEAB357} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
+		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
+		{7A953990-6596-40B8-A426-FA17064C3E62} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {564C82B9-B61B-49B3-96FF-DB1C3A63D2A4}
+	EndGlobalSection
+EndGlobal
