@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.API", "Carpet.API\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.DBContext", "Carpet.DBContext\Carpet.DBContext.csproj", "{C236D9BF-E392-4BD4-B34A-E00B4BA09E81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpet.Infrastructure", "Carpet.Infrastructure\Carpet.Infrastructure.csproj", "{7A953990-6596-40B8-A426-FA17064C3E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.Infrastructure", "Carpet.Infrastructure\Carpet.Infrastructure.csproj", "{7A953990-6596-40B8-A426-FA17064C3E62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

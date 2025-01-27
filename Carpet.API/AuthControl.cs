@@ -64,7 +64,7 @@ public static class AuthControl
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = "your_issuer",
-                    ValidAudience = "your_audience",
+                    ValidAudience = "your_audience", //builder.Configuration["Jwt:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                 };
             });

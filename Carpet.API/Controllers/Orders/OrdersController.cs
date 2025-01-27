@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Carpet.API.Controllers.Orders;
 
-[Authorize]
+//[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class OrdersController : ControllerBase
