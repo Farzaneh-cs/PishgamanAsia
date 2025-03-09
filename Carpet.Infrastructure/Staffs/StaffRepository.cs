@@ -12,6 +12,12 @@ public class StaffRepository : IStaffRepository
     {
         _context = context;
     }
+
+    public async Task<Staff> CheckIsUniqeNameAsync(string name)
+    {
+       return await _context.Staffs.FirstOrDefaultAsync(e => e.LastName == name);
+    }
+
     public Guid CreateAsync(Staff staff)
     {
         _context.AddAsync(staff);
@@ -24,18 +30,21 @@ public class StaffRepository : IStaffRepository
         return await _context.Staffs.FindAsync(id);
     }
 
-    public async Task<List<Staff>> GetListAsync(Guid serviceProvider, string? Family, string? mobile)
-    {
-        var staffs = _context.Staffs.Where(x => x.ServiceProviderId == serviceProvider).AsNoTracking();
 
-        if (Family != null)
+    public async Task<List<Staff>> GetListAsync(string? lastname, string? nationalCode, int number, int pageSize)
+    {
+        var staffs = _context.Staffs.AsNoTracking();
+
+        if (lastname != null)
         {
-            staffs = staffs.Where(x => x.Family.Contains(Family));
+            staffs = staffs.Where(x => x.LastName.Contains(lastname));
         }
-        if (mobile != null)
+        if (nationalCode != null)
         {
-            staffs = staffs.Where(x => x.Mobile == mobile );
+            staffs = staffs.Where(x => x.NationalCode == nationalCode);
         }
+
+        staffs = staffs.Skip((number - 1) * pageSize).Take(pageSize);
         return await staffs.ToListAsync();
     }
 }

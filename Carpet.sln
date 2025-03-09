@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.DBContext", "Carpet.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carpet.Infrastructure", "Carpet.Infrastructure\Carpet.Infrastructure.csproj", "{7A953990-6596-40B8-A426-FA17064C3E62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carpet.UI", "Carpet.UI\Carpet.UI.csproj", "{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,10 +41,6 @@ Global
 		{7A953990-6596-40B8-A426-FA17064C3E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A953990-6596-40B8-A426-FA17064C3E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A953990-6596-40B8-A426-FA17064C3E62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,7 +51,6 @@ Global
 		{435FE384-7A91-4751-BCAE-D7B6FFEAB357} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
 		{C236D9BF-E392-4BD4-B34A-E00B4BA09E81} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
 		{7A953990-6596-40B8-A426-FA17064C3E62} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
-		{FB66F82E-5C7F-4FEE-8BA6-6B6B9E8BEDCE} = {DCF71FEC-D437-499C-8B37-7FF9B53D1D21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {564C82B9-B61B-49B3-96FF-DB1C3A63D2A4}

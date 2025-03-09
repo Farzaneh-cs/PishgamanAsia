@@ -2,17 +2,13 @@
 using Carpet.Domain.UsersRoles;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.Data;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace Carpet.API.Controllers.Login;
 
 [Route("api/[controller]")]
 [ApiController]
 public class LoginController : ControllerBase
+
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IConfiguration _configuration;
@@ -24,7 +20,7 @@ public class LoginController : ControllerBase
         _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
     }
 
-    [HttpPost("login")]
+    [HttpPost]
     public async Task<IActionResult> Login([FromBody] LoginRequest model)
     {
         if (!ModelState.IsValid)

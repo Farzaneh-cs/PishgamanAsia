@@ -17,12 +17,17 @@ public class StaffGetListQueryHandler : IQueryHandler<StaffGetListQuery, List<St
     }
     public async Task<List<StaffDto>> Handle(StaffGetListQuery request, CancellationToken cancellationToken)
     {
-        var staffs = await _staffRepository.GetListAsync(request.ServiceProvider,
-                                                                      request.Family,
-                                                                      request.Mobile);
+        var staffs = await _staffRepository.GetListAsync(request.Family,
+                                                         request.NationalCode,
+                                                         request.number,
+                                                         request.pagesize);
 
-        var staffDtos = _mapper.Map<List<StaffDto>>(staffs);
-
-        return staffDtos;
+        return staffs.Select(x => new StaffDto
+        {
+            Id = x.Id,
+            Family = x.FirstName + " " + x.LastName,
+            Mobile = x.MobileNumber,
+            NationalCode = x.NationalCode
+        }).ToList();
     }
 }

@@ -2,5 +2,5 @@
 
 namespace Carpet.Application.Staffs.GetList
 {
-    public record StaffGetListQuery(Guid ServiceProvider, string? Family, string? Mobile) :IQuery<List<StaffDto>>;
+    public record StaffGetListQuery(string? Family, string? NationalCode, int number, int pagesize) :IQuery<List<StaffDto>>;
 }

@@ -9,7 +9,7 @@ public static class RoleInitializer
     public static async Task Initialize(IServiceProvider serviceProvider)
     {
         var roleManager = serviceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
-        var roleNames = new[] { "Admin", "Manager", "Driver", "Cleaner", "Other" };
+        var roleNames = new[] { "Admin", "User" };
 
         foreach (var roleName in roleNames)
         {

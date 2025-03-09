@@ -1,12 +1,14 @@
 ﻿using Carpet.DBContext.Initialize;
 using Carpet.Domain.UsersRoles;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 
 namespace Carpet.API;
 
 public static class SeedData
 {
-    public async static Task SeedUserRole(WebApplication app)
+    public async static Task SeedUserRole(WebApplication app,
+                             IConfiguration configuration)
     {
         using (var scope = app.Services.CreateScope())
         {
@@ -27,28 +29,30 @@ public static class SeedData
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
             var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
 
-            string userName = "admin";
-            string password = "$Admin123";
-
-
-            if (await userManager.FindByNameAsync(userName) == null)
+            var seedUsers = configuration.GetSection("SeedUsers").Get<List<SeedUser>>();
+            
+            foreach (var item in seedUsers)
             {
-                var user = new ApplicationUser
+                if (await userManager.FindByNameAsync(item.Username) == null)
                 {
-                    UserName = userName,
-                };
+                    var user = new ApplicationUser
+                    {
+                        UserName = item.Username,
+                    };
 
-                var result = await userManager.CreateAsync(user, password);
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(user, "Admin");
-                }
-                else
-                {
-                    // Log or handle errors if user creation fails
-                    throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
+                    var result = await userManager.CreateAsync(user, item.Password);
+                    if (result.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(user, item.Role);
+                    }
+                    else
+                    {
+                        // Log or handle errors if user creation fails
+                        throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
+                    }
                 }
             }
+          
         }
 
     }
